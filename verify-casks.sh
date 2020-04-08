@@ -2,8 +2,8 @@
 
 set -e
 
-# shellcheck source=../homebrew-helpers/FUNCTIONS.sh
-. "../homebrew-helpers/FUNCTIONS.sh"
+# shellcheck source=../homebrew-tools/FUNCTIONS.sh
+. "../homebrew-tools/FUNCTIONS.sh"
 
 case "${1}" in
   virtualbox)
