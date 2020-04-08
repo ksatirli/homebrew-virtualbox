@@ -50,7 +50,33 @@ brew cask install virtualbox@6.1.0
 
 The [operatehappy/homebrew-tools](https://github.com/operatehappy/homebrew-tools) repository includes _tools_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
 
-The associated [README.md](https://github.com/operatehappy/homebrew-tools/blob/master/README.md) contains extensive information that outlines the steps to add and update Casks.
+The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` to be available on the same level as this repository.
+
+### Adding or Updating Casks
+
+In the following example, the steps reference a (currently unreleased) `6.0.50` version of VirtualBox and a previously installed version of VirtualBox `6.0.49`.
+
+Your contribution may be for a different product and version, but the steps remain alike:
+
+- Edit the `VIRTUALBOX_60X` variable in `VERSIONS.sh` and add an entry of `"6.0.50"`
+
+- Generate a Cask file for this version, using `generate-casks.sh virtualbox`
+
+- The `generate-casks.sh` helper will parse the `VERSION.sh` file and retrieve the _checksum_ for VirtualBox `6.0.50`
+
+- Use `verify-casks.sh virtualbox` to verify installability of the newly generated VirtualBox Cask
+
+  - This helper will carry out the following steps:
+
+    - Copy the generated Cask to `$(brew --repo)/Library/Taps/operatehappy/homebrew-virtualbox/Casks/`
+
+    - Uninstalls the previously installed version of VirtualBox using `brew cask uninstall virtualbox@6.0.49`
+
+    - Installs the new version using `brew cask install virtualbox@6.0.50`
+
+    - Lints the Cask file using `brew cask style virtualbox@6.0.50.`
+
+    - Uninstall the new version using `brew cask uninstall virtualbox@6.0.50`
 
 ## Notes
 
