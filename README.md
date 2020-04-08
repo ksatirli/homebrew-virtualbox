@@ -48,9 +48,9 @@ brew cask install virtualbox@6.1.0
 
 ## Contributing
 
-The [operatehappy/homebrew-helpers](https://github.com/operatehappy/homebrew-helpers) repository includes _helpers_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
+The [operatehappy/homebrew-tools](https://github.com/operatehappy/homebrew-tools) repository includes _tools_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
 
-The associated [README.md](https://github.com/operatehappy/homebrew-helpers/blob/master/README.md) contains extensive information that outlines the steps to add and update Casks.
+The associated [README.md](https://github.com/operatehappy/homebrew-tools/blob/master/README.md) contains extensive information that outlines the steps to add and update Casks.
 
 ## Notes
 
