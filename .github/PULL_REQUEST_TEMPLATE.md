@@ -14,7 +14,7 @@ Any other relevant environment information:
 
 # TODO
 
-- [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-hashicorp/pulls) for a similar Cask update
+- [ ] Checked open [Pull Requests](https://github.com/operatehappy/homebrew-virtualbox/pulls) for a similar Cask update
 - [ ] Built the Cask locally and verified its installability
 - [ ] Tested installability using `brew cask install product@x.y.z.rb`
 - [ ] Tested uninstallability using `brew cask uninstall product@x.y.z.rb`
