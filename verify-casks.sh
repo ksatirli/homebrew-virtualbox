@@ -10,16 +10,16 @@ set -e
 
 case "${1}" in
   virtualbox)
+    NAME="${1}"
 
-    for VERSION in "${VIRTUALBOX_6XX[@]}"; do
-      # shellcheck disable=SC2034
-      PRODUCT_NAME="virtualbox"
-      PRODUCT_VERSION="${VERSION%%,*}" # split on comma and use first part
+    for PRODUCT_VERSION in "${VIRTUALBOX_6XX[@]}"; do
+      VERSION="${PRODUCT_VERSION%%,*}" # split on comma and use first part
+      BUILD="${PRODUCT_VERSION##*,}" # split on comma and use second part
 
-      # TODO: implement a cleaner way of building `PRODUCT_VERSION_CLEAN`
-      PRODUCT_VERSION_CLEAN="${PRODUCT_VERSION/_/-}"
-      PRODUCT_VERSION_CLEAN="${PRODUCT_VERSION_CLEAN/BETA/beta}"
-      PRODUCT_VERSION_CLEAN="${PRODUCT_VERSION_CLEAN/RC/rc}"
+      # TODO: implement a cleaner way of building `VERSION_CLEAN`
+      VERSION_CLEAN="${VERSION/_/-}"
+      VERSION_CLEAN="${VERSION_CLEAN/BETA/beta}"
+      VERSION_CLEAN="${VERSION_CLEAN/RC/rc}"
 
       verify_cask
     done
