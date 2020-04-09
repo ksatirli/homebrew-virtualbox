@@ -1,11 +1,11 @@
-cask 'virtualbox@%%PRODUCT_VERSION_CLEAN%%' do
-  version '%%PRODUCT_VERSION_CLEAN%%'
-  sha256 '%%PRODUCT_CHECKSUM%%'
+cask '%%BINARY%%@%%VERSION_CLEAN%%' do
+  version '%%VERSION_CLEAN%%'
+  sha256 '%%CHECKSUM%%'
 
-  url 'https://download.virtualbox.org/virtualbox/%%PRODUCT_VERSION%%/VirtualBox-%%PRODUCT_VERSION%%-%%PRODUCT_BUILD%%-OSX.dmg'
+  url '%%PACKAGE_PROTOCOL%%://%%PACKAGE_HOST%%/%%BINARY%%/%%VERSION%%/%%PACKAGE_PATH%%'
   appcast 'https://download.virtualbox.org/virtualbox/LATEST.TXT'
   name 'Oracle VirtualBox'
-  homepage 'https://www.virtualbox.org/'
+  homepage '%%HOMEPAGE%%'
 
   auto_updates false
   conflicts_with cask: 'virtualbox-beta'
