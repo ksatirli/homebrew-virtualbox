@@ -50,7 +50,7 @@ brew cask install virtualbox@6.1.0
 
 The [operatehappy/homebrew-tools](https://github.com/operatehappy/homebrew-tools) repository includes _tools_ that assist with the generation of _Casks_ for this and other [@operatehappy-maintained Taps](https://github.com/search?q=org%3Aoperatehappy+homebrew-tap).
 
-The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` to be available on the same level as this repository.
+The `generate-casks.sh` and `verify-casks.sh` scripts expect the `operatehappy/homebrew-tools` repository to be available on the same level as this repository.
 
 ### Adding or Updating Casks
 
