@@ -30,7 +30,7 @@ brew tap operatehappy/homebrew-virtualbox
 
 This Tap provides an exhaustive range of the following applications:
 
-- VirtualBox `>= 6.0.0_BETA1` and `<= 6.1.8`
+- VirtualBox `>= 6.0.0_BETA1` and `<= 6.1.12`
 
 ### Installing a Cask
 

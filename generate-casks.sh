@@ -15,6 +15,8 @@ CASK_FILE="templates/generic.cask"
 
 case "${1}" in
   virtualbox)
+    echo "here"
+
     BINARY="virtualbox"
     NAME="VirtualBox"
     HOMEPAGE="https:\/\/www.virtualbox.org\/"
@@ -35,7 +37,6 @@ case "${1}" in
       generate_cask
     done
     ;;
-
 
   *)
     echo "missing product"
