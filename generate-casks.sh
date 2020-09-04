@@ -36,7 +36,6 @@ case "${1}" in
     done
     ;;
 
-
   *)
     echo "missing product"
     ;;
